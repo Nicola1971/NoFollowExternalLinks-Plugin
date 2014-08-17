@@ -1,4 +1,4 @@
-NoFollowExternalLinks-Plugin
+NoFollowExternalLinks Plugin for MODX Evolution
 ============================
 
 Add no-follow to external links in MODX Evolution content (only in content field)
