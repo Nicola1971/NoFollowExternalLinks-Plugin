@@ -6,7 +6,7 @@
  *
  * @author    Nicola Lambathakis
  * @category    plugin
- * @version    1.0 RC1
+ * @version    1.0 PL
  * @license	 http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  * @internal    @events OnLoadWebDocument
  * @internal    @installset base
@@ -16,7 +16,7 @@
 /*
 ###NoFollowExternalLinks Plugin for MODX Evolution###
 Written By Nicola Lambathakis http://www.tattoocms.it/
-Version 1.0 RC1
+Version 1.0 PL
 Events: OnLoadWebDocument
 
  */
@@ -24,7 +24,6 @@ Events: OnLoadWebDocument
  $e= & $modx->Event;
 switch ($e->name) {
 	case "OnLoadWebDocument":
-	$text = $modx->documentObject['content'];
 	// search external Links in document  and add no-follow tag
 	 	$modx->documentObject['content'] = str_replace(' href="http://',' rel="no-follow" href="http://',$modx->documentObject['content']);
 		break;
