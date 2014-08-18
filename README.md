@@ -1,7 +1,10 @@
 NoFollowExternalLinks Plugin for MODX Evolution
 ============================
 
-Add rel="no-follow" to all external links in MODX Evolution content (only in content field)
+Add rel="no-follow" to all external links in MODX Evolution content (only in content field).
+
+Using the configuration settings you can add rel="no-follow" only to a selected domain (ie: amazon affiliate links)
+
 
 # Install
 Install with Package Manager or Store module
@@ -15,4 +18,4 @@ or
 # Updates:
 
 ## 1.1 PL
-* Optional Plugin configuration to add rel="no-follow" only to a selected domain (ie: amazon affiliate links)   
+* Optional Plugin configuration to add rel="no-follow" only to a selected domain   
