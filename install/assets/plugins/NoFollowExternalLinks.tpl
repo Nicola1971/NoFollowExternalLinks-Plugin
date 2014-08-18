@@ -33,7 +33,7 @@ $NofollowDomain = isset($NofollowDomain) ? $NofollowDomain : '';
 $e= & $modx->Event;
 switch ($e->name) {
 	case "OnLoadWebDocument":
-	// search affiliate Links in document  and add no-follow tag
+	// search external Links in document  and add no-follow tag
 	 	$modx->documentObject['content'] = str_replace(' href="http://'.$NofollowDomain.'',' rel="no-follow" href="http://'.$NofollowDomain.'',$modx->documentObject['content']);
 		break;
 
