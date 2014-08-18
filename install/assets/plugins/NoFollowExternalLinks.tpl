@@ -11,6 +11,7 @@
  * @internal    @events OnLoadWebDocument
  * @internal    @installset base
  * @internal    @modx_category Seo4Evo
+ * @internal    @properties  &NofollowDomain= NoFollow only this Domain:;string;
  */
 
 /*
@@ -24,7 +25,8 @@ Events: OnLoadWebDocument
 /*
 
 Optional configuration to add re="no-follow" only to a selected domain (ie: amazon affiliate links)
-&NofollowDomain= NoFollow this Domain:;string;www.amazon
+
+&NofollowDomain= NoFollow only this Domain:;string;www.amazon
 */
 $NofollowDomain = isset($NofollowDomain) ? $NofollowDomain : '';
 
