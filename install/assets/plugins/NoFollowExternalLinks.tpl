@@ -41,7 +41,7 @@ switch ($e->name) {
 	 if ($DoFollow[$Followtv] == nofollow)  // check tv value
 {
 	// search external Links in document and add no-follow tag
-	 	$modx->documentObject['content'] = str_replace(' href="http://'.$NofollowDomain.'',' rel="no-follow" href="http://'.$NofollowDomain.'',$modx->documentObject['content']);
+	 	$modx->documentObject['content'] = str_replace(' href="http://'.$NofollowDomain.'',' rel="nofollow" href="http://'.$NofollowDomain.'',$modx->documentObject['content']);
 	 }
 		break;
 
