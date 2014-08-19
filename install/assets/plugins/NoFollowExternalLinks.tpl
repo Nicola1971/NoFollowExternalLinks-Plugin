@@ -17,7 +17,7 @@
 /*
 ###NoFollowExternalLinks Plugin for MODX Evolution###
 Written By Nicola Lambathakis http://www.tattoocms.it/
-Version 1.1 PL
+Version 1.2 PL
 Events: OnLoadWebDocument
 
  */
