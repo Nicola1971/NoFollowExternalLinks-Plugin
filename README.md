@@ -21,7 +21,7 @@ or
 * Create a plugin with name **NoFollowExternalLinks** and paste the code from NoFollowExternalLinks.tpl
 * Check OnLoadWebDocument system event 
 
-* Create a template variable named **DoFollow** to your template. 
+* Create a template variable named **DoFollow**. 
 * input type: dropdown
 * input_options No==nofollow||Yes==follow 
 * default value: nofollow
