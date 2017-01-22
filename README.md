@@ -1,4 +1,4 @@
-NoFollowExternalLinks Plugin for MODX Evolution v. 1.3 PL
+NoFollowExternalLinks Plugin for MODX Evolution v. 1.4 PL
 ============================
 
 Add **rel="nofollow"** to all external links in MODX Evolution content (only in content field).
@@ -20,7 +20,7 @@ Using the configuration settings you can add rel="nofollow" only to a selected d
 or
 
 * Create a plugin with name **NoFollowExternalLinks** and paste the code from NoFollowExternalLinks.tpl
-* Check OnLoadWebDocument system event 
+* Check **OnParseDocument** system event 
 
 * Create a template variable named **DoFollow**. 
 * input type: dropdown
@@ -29,6 +29,8 @@ or
 * Assign the **DoFollow** template variable to your template.
 
 # Updates:
+## 1.4 PL
+* 1.4 fix for evo 1.2.1: changed event  from OnLoadWebDocument to OnParseDocument
 
 ## 1.3 PL
 * NoFollow https url    
