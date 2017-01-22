@@ -6,9 +6,9 @@
  *
  * @author    Nicola Lambathakis
  * @category    plugin
- * @version    1.3 PL
+ * @version    1.4 PL
  * @license	 http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
- * @internal    @events OnLoadWebDocument
+ * @internal    @events OnParseDocument
  * @internal    @installset base
  * @internal    @modx_category Seo4Evo
  * @internal    @properties  &NofollowDomain= NoFollow only this Domain:;string; &NofollowHttps= NoFollow external https urls:;list;yes,no;yes
@@ -17,8 +17,8 @@
 /*
 ###NoFollowExternalLinks Plugin for MODX Evolution###
 Written By Nicola Lambathakis http://www.tattoocms.it/
-Version 1.3 PL
-Events: OnLoadWebDocument
+Version 1.4 PL
+Events: OnParseDocument
 
  */
 
@@ -40,7 +40,7 @@ $DoFollow = $modx->getTemplateVarOutput($Followtv,id); // Get the template value
 
 $e= & $modx->Event;
 switch ($e->name) {
-	case "OnLoadWebDocument":
+	case "OnParseDocument":
 	 if ($DoFollow[$Followtv] == nofollow)  // check tv value
 {
 	// search external Links in document and add no-follow tag
