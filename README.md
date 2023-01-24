@@ -1,7 +1,7 @@
-NoFollowExternalLinks Plugin for MODX Evolution v. 1.4 PL
+NoFollowExternalLinks Plugin for Evolution v. 1.4 PL
 ============================
 
-Add **rel="nofollow"** to all external links in MODX Evolution content (only in content field).
+Add **rel="nofollow"** to all external links in Evolution content (only in content field).
 
 #### Features: 
 
