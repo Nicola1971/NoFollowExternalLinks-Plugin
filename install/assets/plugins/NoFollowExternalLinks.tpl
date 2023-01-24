@@ -40,7 +40,7 @@ $DoFollow = $modx->getTemplateVarOutput($Followtv,'id'); // Get the template val
 
 $e= & $modx->Event;
 switch ($e->name) {
-	case "OnLoadWebDocument":
+	case "OnParseDocument":
 	 if ($DoFollow[$Followtv] == 'nofollow')  // check tv value
 {
 	// search external Links in document and add no-follow tag
