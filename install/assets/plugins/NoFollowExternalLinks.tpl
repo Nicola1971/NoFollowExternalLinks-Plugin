@@ -6,7 +6,7 @@
  *
  * @author    Nicola Lambathakis
  * @category    plugin
- * @version    1.4 PL
+ * @version    1.5
  * @license	 http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  * @internal    @events OnParseDocument
  * @internal    @installset base
@@ -17,7 +17,7 @@
 /*
 ###NoFollowExternalLinks Plugin for MODX Evolution###
 Written By Nicola Lambathakis http://www.tattoocms.it/
-Version 1.4 PL
+Version 1.5
 Events: OnParseDocument
 
  */
@@ -29,25 +29,22 @@ Default configuration:
 Note:
 Use "NoFollow only this Domain" to add re="nofollow" only to a selected domain (ie: amazon affiliate links)
 
-"NoFollow only this Domain"  www.amazon
+&NofollowDomain= NoFollow only this Domain:;string;www.amazon
 */
 
 $NofollowDomain = isset($NofollowDomain) ? $NofollowDomain : '';
 
 $Followtv = "DoFollow"; // Set the name of the Template Variable to enable do-follow links in content
 //$documentIdentifier = ($modx->documentIdentifier);
-$DoFollow = $modx->getTemplateVarOutput($Followtv,id); // Get the template value using API call
+$DoFollow = $modx->getTemplateVarOutput($Followtv,'id'); // Get the template value using API call
 
 $e= & $modx->Event;
 switch ($e->name) {
-	case "OnParseDocument":
-	 if ($DoFollow[$Followtv] == nofollow)  // check tv value
+	case "OnLoadWebDocument":
+	 if ($DoFollow[$Followtv] == 'nofollow')  // check tv value
 {
 	// search external Links in document and add no-follow tag
 	 	$modx->documentObject['content'] = str_replace(' href="http://'.$NofollowDomain.'',' rel="nofollow" href="http://'.$NofollowDomain.'',$modx->documentObject['content']);
-		 if ($NofollowHttps == yes) {
-		$modx->documentObject['content'] = str_replace(' href="https://'.$NofollowDomain.'',' rel="nofollow" href="https://'.$NofollowDomain.'',$modx->documentObject['content']);
-		 }
 	 }
 		break;
 
