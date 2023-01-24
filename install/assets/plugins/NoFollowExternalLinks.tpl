@@ -15,7 +15,7 @@
  */
 
 /*
-###NoFollowExternalLinks Plugin for MODX Evolution###
+###NoFollowExternalLinks Plugin for Evolution###
 Written By Nicola Lambathakis http://www.tattoocms.it/
 Version 1.5
 Events: OnParseDocument
